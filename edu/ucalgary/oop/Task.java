@@ -21,6 +21,30 @@ public class Task {
         return copied_task;
     }
 
+    public void setId(String newid){
+        this.id = newid;
+    }
+
+    public String getId(){
+        return this.id;
+    }
+
+    public void settitile(String newtitle){
+        this.id = newtitle;
+    }
+
+    public String getTitle(){
+        return this.title;
+    }
+
+    public void setIscompleted(boolean newisCompleted){
+        this.isCompleted = newisCompleted;
+    }
+
+    public boolean getIscompleted(){
+        return this.isCompleted;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
