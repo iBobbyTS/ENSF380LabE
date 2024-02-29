@@ -11,8 +11,8 @@ class ToDoList implements IToDoList {
 
     public ToDoList() {
         this.history = new Stack<List<Task>>();
-        this.taskList = new List<Task>(); 
-            
+        this.taskList = new ArrayList<Task>(); 
+        this.taskDict = new Hashtable<String,Task>();
     }
     
 
@@ -21,6 +21,7 @@ class ToDoList implements IToDoList {
     }
 
     public void addTask(Task task){
+        addHistory();
         taskList.add(task);
         taskDict.put(task.getId(), task);
     }
@@ -30,17 +31,27 @@ class ToDoList implements IToDoList {
     }
 
     public void completeTask(String id){
+        addHistory();        
         getTaskById(id).setIsCompleted(true);
     }
 
     public void deleteTask(String taskId) {
+        addHistory();
         taskList.remove(getTaskById(taskId));
         taskDict.remove(taskId);
     }
 
     public void editTask(String taskId, String title, boolean completed) {
+        addHistory();
         getTaskById(taskId).setTitle(title);
         getTaskById(taskId).setIsCompleted(completed);
     }
 
+    private void addHistory(){
+        this.history.add(this.taskList);
+    }
+
+    public void undo(){
+        this.taskList = this.history.pop();
+    }
 }
