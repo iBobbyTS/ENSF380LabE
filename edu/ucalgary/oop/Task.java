@@ -16,10 +16,9 @@ public class Task {
         this.isCompleted = false;
     }
 
-    public Task(String newid, String newtitle, boolean newisCompleted){
+    public Task(String newid, String newtitle){
         this.id = newid;
         this.title = newtitle;
-        this.isCompleted = newisCompleted;
     }
 
     public Task Copy(Task RS) {
