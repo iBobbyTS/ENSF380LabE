@@ -49,7 +49,7 @@ public class Task {
         this.isCompleted = newisCompleted;
     }
 
-    public boolean getIscompleted(){
+    public boolean isCompleted(){
         return this.isCompleted;
     }
 
