@@ -37,15 +37,15 @@ public class Task {
         return this.id;
     }
 
-    public void settitile(String newtitle){
-        this.id = newtitle;
+    public void setTitle(String newTitle){
+        this.id = newTitle;
     }
 
     public String getTitle(){
         return this.title;
     }
 
-    public void setIscompleted(boolean newisCompleted){
+    public void setIsCompleted(boolean newisCompleted){
         this.isCompleted = newisCompleted;
     }
 
