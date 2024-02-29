@@ -1,9 +1,11 @@
 package edu.ucalgary.oop;
 import java.util.List;
+import java.util.*;
 
 
 class ToDoList implements IToDoList {
     private List<Task> taskList;
+    private Stack<List<Task>> history;
     public ToDoList() {
 
     }
@@ -27,4 +29,6 @@ class ToDoList implements IToDoList {
     public void editTask(String taskId, String title, boolean completed) {
 
     }
+
+
 }
