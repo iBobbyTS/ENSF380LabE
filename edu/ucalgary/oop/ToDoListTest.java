@@ -3,6 +3,9 @@ package edu.ucalgary.oop;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import javax.sound.midi.SysexMessage;
+
 import static org.junit.Assert.*;
 import java.util.List;
 

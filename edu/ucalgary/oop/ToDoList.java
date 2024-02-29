@@ -1,13 +1,11 @@
 package edu.ucalgary.oop;
-import java.util.List;
-import java.util.Dictionary;
 import java.util.*;
 
 
 class ToDoList implements IToDoList {
     private List<Task> taskList;
     private Dictionary<String, Task> taskDict;
-    private Stack<List<Task>> history;
+    public Stack<List<Task>> history;
 
     public ToDoList() {
         this.history = new Stack<List<Task>>();
