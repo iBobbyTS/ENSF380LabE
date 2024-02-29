@@ -35,8 +35,8 @@ class ToDoList implements IToDoList {
     }
 
     public void editTask(String taskId, String title, boolean completed) {
-
+        getTaskById(taskId).setTitle(title);
+        getTaskById(taskId).setIsCompleted(completed);
     }
-
 
 }
