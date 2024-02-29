@@ -21,11 +21,11 @@ public class Task {
         this.title = newtitle;
     }
 
-    public Task Copy(Task RS) {
+    public Task Copy() {
         Task copied_task = new Task();
-        copied_task.id = RS.id;
-        copied_task.title = RS.title;
-        copied_task.isCompleted = RS.isCompleted;
+        copied_task.id = this.id;
+        copied_task.title = this.title;
+        copied_task.isCompleted = this.isCompleted;
         return copied_task;
     }
 
@@ -38,7 +38,7 @@ public class Task {
     }
 
     public void setTitle(String newTitle){
-        this.id = newTitle;
+        this.title = newTitle;
     }
 
     public String getTitle(){

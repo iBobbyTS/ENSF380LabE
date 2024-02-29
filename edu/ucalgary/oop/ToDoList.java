@@ -11,7 +11,7 @@ class ToDoList implements IToDoList {
 
     public ToDoList() {
         this.history = new Stack<List<Task>>();
-        this.taskList = new ArrayList<Task>(); 
+        this.taskList = new ArrayList<Task>();
         this.taskDict = new Hashtable<String,Task>();
     }
     
@@ -48,7 +48,11 @@ class ToDoList implements IToDoList {
     }
 
     private void addHistory(){
-        this.history.add(this.taskList);
+        List<Task> newlist = new ArrayList<Task>();
+        for (Task task : this.taskList) {
+            newlist.add(task.Copy());
+        }
+        this.history.push(newlist);
     }
 
     public void undo(){
