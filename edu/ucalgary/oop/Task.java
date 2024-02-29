@@ -38,7 +38,7 @@ public class Task {
     }
 
     public void setTitle(String newTitle){
-        this.id = newTitle;
+        this.title = newTitle;
     }
 
     public String getTitle(){
