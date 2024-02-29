@@ -8,9 +8,13 @@ class ToDoList implements IToDoList {
     private List<Task> taskList;
     private Dictionary<String, Task> taskDict;
     private Stack<List<Task>> history;
-    public ToDoList() {
 
+    public ToDoList() {
+        this.history = new Stack<List<Task>>();
+        this.taskList = new List<Task>(); 
+            
     }
+    
 
     public void addTask(Task task){
         taskList.add(task);
